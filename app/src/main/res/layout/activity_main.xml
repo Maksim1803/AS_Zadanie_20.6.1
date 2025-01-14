@@ -45,10 +45,10 @@
       до надписи "Привет..." (layout_margin="@dimen/marginTop_button")-->
     <Button
         android:id="@+id/button"
-        android:background="@drawable/ripple_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginTop_button"
+        android:background="@drawable/rectangle"
         android:onClick="onClickToast"
         android:text="@string/text_on_button"
         android:textSize="20sp"
@@ -56,17 +56,17 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/button2"
-        android:background="@drawable/rectangle"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AppCompatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginTop_AppCompatButton"
+        android:background="@drawable/ripple_button"
+        android:onClick="onClickToast2"
         android:text="@string/text_on_button2"
         android:textSize="20sp"
-        android:onClick="onClickToast2"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:layout_margin="@dimen/marginTop_button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
