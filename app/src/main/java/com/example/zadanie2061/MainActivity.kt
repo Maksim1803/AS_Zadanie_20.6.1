@@ -18,4 +18,8 @@ class MainActivity : AppCompatActivity() {
     fun onClickToast(view: View) {
         Toast.makeText(this, "Я буду android-разработчиком!", Toast.LENGTH_LONG).show()
     }
+
+    fun onClickToast2(view: View) {
+        Toast.makeText(this, "Я таки буду android-разработчиком!", Toast.LENGTH_LONG).show()
+    }
 }

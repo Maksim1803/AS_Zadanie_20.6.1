@@ -2,4 +2,5 @@
     <string name="app_name">Zadanie 20.6.1</string>
     <string name="my_text">Привет! Пусть всем будет хорошо!</string>
     <string name="text_on_button">Нажми меня!</string>
+    <string name="text_on_button2">Нажми меня снова!</string>
 </resources>
