@@ -4,4 +4,6 @@
     <string name="text_on_button">Нажми меня!</string>
     <string name="text_on_button2">Нажми меня снова!</string>
     <string name="text_on_button_2">Нажми меня еще раз!</string>
+    <string name="text_on_button_3">Кнопка для layer-list</string>
+    <string name="text_on_button_4">Кнопка для selector</string>
 </resources>
