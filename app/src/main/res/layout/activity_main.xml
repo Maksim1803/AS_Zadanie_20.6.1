@@ -43,6 +43,9 @@
     <!--Добавим размер теста "Нажми меня!" (textSize="20sp")-->
     <!--Добавим в созданный ранее файл dimens.xml размер от верха кнопки
       до надписи "Привет..." (layout_margin="@dimen/marginTop_button")-->
+    <!--Добавим ссылку на всплывающую при нажатии кнопки надпись:
+    android:onClick="onClickToast" (запускает метод из Main_Activity)-->
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -56,6 +59,16 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!--Добавим кнопку с визуальными эффектами
+    (androidx.appcompat.widget.AppCompatButton), простая кнопка так может-->
+    <!--Добавим в созданный ранее файл dimens.xml размер от верха кнопки
+      до кнопки "Нажми меня" (layout_margin="@dimen/marginTop_AppCompatButton")-->
+    <!--Добавим ссылку на файл ripple_button.xml для отображения цветного перелива
+      для кнопки "Нажми...снова" (layout_margin="@dimen/marginTop_AppCompatButton")-->
+    <!--Добавим ссылку на всплывающую при нажатии кнопки очередную надпись:
+    android:onClick="onClickToast" (запускает метод из Main_Activity)-->
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AppCompatButton"
         android:layout_width="wrap_content"
@@ -65,34 +78,26 @@
         android:onClick="onClickToast2"
         android:text="@string/text_on_button2"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <!--Добавим кнопку с визуальными эффектами (копия, указанной выше),
+        только ссылку изменим и вместо "@drawable/ripple_button"
+        напишем: background="?android...Borderless"-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AppCompatButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginTop_AppCompatButton"
-        android:background="@drawable/ripple_button_2"
+        android:layout_margin="@dimen/marginTop_AppCompatButton2"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:onClick="onClickToast2"
         android:text="@string/text_on_button_2"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/AppCompatButton"
+        app:layout_constraintStart_toStartOf="@+id/AppCompatButton"
         app:layout_constraintTop_toBottomOf="@+id/AppCompatButton" />
 
-    <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/marginTop_button"
-            android:background="@drawable/selectors"
-            android:onClick="onClickToast"
-            android:text="@string/text_on_button_3"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/AppCompatButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
